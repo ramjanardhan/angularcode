@@ -10,13 +10,15 @@ pipeline {
 
 stage('Node Modules installing') {       
       
-             sh "npm install"                    
+       steps     
+{	   sh "npm install"                    
 
 }
+}
 stage('Build application') {       
-      
+       steps {
              sh "ng build"                    
-
+}
 }    
     
 //stage('Sonarqube Coverage') {       
